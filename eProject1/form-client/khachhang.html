@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khach Hang</title>
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="khachhang.css">
+    <script src="https://kit.fontawesome.com/ed34e232a5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Xanh+Mono&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<!----------------top header------------------>
+<header class="top-header">
+    <div class="left-topheader">
+        <p>𝚆𝚎𝚕𝚌𝚘𝚖𝚎 𝚝𝚘 𝙾𝚛𝚐𝚊𝚗𝚒𝚌 𝚂𝚝𝚊𝚛 𝚏𝚛𝚞𝚒𝚝 𝚊𝚗𝚍 𝚏𝚘𝚘𝚍</p>
+    </div>
+    <div class="right-topheader">
+        <div class="div-loginheader">
+            <ul class="menu-nav-account">
+                <li class="nav-account1">
+                    <button onclick="myFunctiontwo()"><i class="fa-solid fa-circle-user"></i> My Account</button>
+                    <ul id="menu-child-account">
+                        <li class="child-account1"><a href=""><i class="fa-solid fa-circle-user"></i> My Account</a></li>
+                        <li class="child-account2"><a href="">Log In</a></li>
+                        <ul class="menu2-child-account">
+                            <li class="child-account3"><a>New customer?</a></li>
+                            <li class="child-account4"><a href="">Sign In</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="div-cartheader">
+            <uL class="menu-nav-cart">
+                <li class="nav-cart1">
+                    <button onclick="myFunction()"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                    <ul id="menu-child-cart">
+                        <li class="child-cart1">
+                            <div class="row1-cart1">
+                                <a href="../form-SP/sanpham.html"><img src="http://img1.cookinglight.timeinc.net/sites/default/files/image/Oxmoor/oh3320p31-large-orange-m.jpg"></a>
+                            </div>
+                            <div class="row2-cart1">
+                                <p>Cam Navie Việt Nam</p>
+                            </div>
+                        </li>
+                        <li class="child-cart2">
+                            <div class="row1-cart2">
+                                <a href="../form-SP/sanpham.html"><img src="../images/apple.png"></a>
+                            </div>
+                            <div class="row2-cart2">
+                                <p>Táo Navie Việt Nam</p>
+                            </div>
+                        </li>
+                        <li class="child-cart3">
+                            <div><a href=""><i class="fa-solid fa-cart-shopping"></i> View Cart</a></div>
+                        </li>
+                    </ul>
+                </li>
+            </uL>
+        </div>
+        <div class="div-logoheader">
+            <p><pre><i title="facebook" class="fa-brands fa-facebook-f"></i>    <i title="google" class="fa-brands fa-google"></i>    <i title="twitch" class="fa-brands fa-twitch"></i>    <i title="instagram" class="fa-brands fa-instagram"></i>    <i title="pinterest" class="fa-brands fa-pinterest-square"></i></pre></p>
+        </div>
+    </div>
+</header>
+
+<div class="header">
+    <div class="sub-header">
+        <ul class="ul-subheader">
+            <li id="li-header1"><a href="../form-main/index.html">Home</a></li>
+            <li id="li-header2">
+                <button class="btn-favorite"  onclick="myFunctionthree()">Favorite</button>
+                <ul id="menu-child-favorite">
+                    <a href="../form-SP/sanpham.html">
+                        <li class="child-cart2">
+                            <div class="row1-cart2">
+                                <img src="../images/apple.png">
+                            </div>
+                            <div class="row2-cart2">
+                                <p>Apple Navie VietNam</p>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </li>
+            <li id="li-header3"><a href="">Category</a></li>
+            <li id="li-header3-1"><a href="">Shop</a></li>
+            <li id="li-header4-img">
+                <a href="../form-main/index.html">
+                    <img  src="../images/logo-main.png"/>
+                </a>
+            </li>
+            <li id="li-header5"><a href="">Gallery</a></li>
+            <li id="li-header5-1"><a href="">Blog</a></li>
+            <li id="li-header6"><a href="">Contact us</a></li>
+            <li id="li-header7-i"><a href="../form-search/seatch.html"><i href="" class="fa-solid fa-magnifying-glass"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<!------------------banner-------------------->
+
+<div class="banner">
+    <div class="sub-banner">
+        <div>
+            <h1>ORGANIC STYLE</h1>
+        </div>
+    </div>
+</div>
+
+<!--------------------body--------------------->
+<section ng-app="validationApp" ng-controller="mainController" class="body" >
+    <div class="sub-body">
+        <div class="body-left">
+            <div class="sub-bodyleft">
+                <div class="row">
+                    <div class="div-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    <div class="div-name">
+                        <p>No Name</p>
+                    </div>
+                </div>
+                <div class="menu-row">
+                    <button onclick="myFunctionfour()">Set up Your Profile</button>
+                </div>
+                <div id="row2"> <!--1-->
+                    <p>Profile</p>
+                </div>
+                <div id="row3"> <!--2-->
+                    <p>Bank</p>
+                </div>
+                <div id="row4"> <!--3-->
+                    <p>Address</p>
+                </div>
+                <div id="row5"> <!--4-->
+                    <p>Change Password</p>
+                </div>
+                <div class="div-cart"> <!--5-->
+                    <p>Cart</p>
+                </div>
+                <div class="div-notification"> <!--6-->
+                    <p>notification</p>
+                </div>
+            </div>
+        </div>
+        <div class="body-right">
+            <div class="sub-bodyright">
+
+               <form method="post" class="formcart">
+                   <div class="sub-formcart">
+                       <div class="top-formcart">
+                           <div class="topcart-col1">
+                               <p>List Product</p>
+                           </div>
+                           <div class="topcart-col2">
+                               <p>Price</p>
+                           </div>
+                           <div class="topcart-col3">
+                               <p>Quantity (Kg)</p>
+                           </div>
+                           <div class="topcart-col4">
+                               <p>Total</p>
+                           </div>
+                           <div class="topcart-col5">
+                               <p>Delete</p>
+                           </div>
+                       </div>
+
+                       <div class="main-formcart">
+                           <div class="ex-col1">
+                               <div class="excol1-left">
+                                   <div class="excol1-img">
+                                       <a href="../form-SP/sanpham.html"><img  src="https://product.hstatic.net/200000423303/product/dau-han-quoc-330g_7d5744607384465fa9c6dd5aab630719_large.jpg"></a>
+                                   </div>
+                                   <div class="excol1-name">
+                                       <p>Strawberry</p>
+                                   </div>
+                               </div>
+                               <div class="excol1-price">
+                                   <div class="sub-excol1-price">
+                                       <p>$55</p>
+                                   </div>
+                               </div>
+                               <div class="excol1-quantity">
+                                   <div class="sub-excol1-quantity">
+                                       <p>12</p>
+                                   </div>
+                               </div>
+                               <div class="excol1-total">
+                                   <div class="sub-excol1-total">
+                                       <p>$666</p>
+                                   </div>
+                               </div>
+                               <div class="excol1-delete">
+                                   <div class="sub-excol1-delete">
+                                       <p>x</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="ex-col2">
+                               <div class="excol2-left">
+                                   <div class="excol2-img">
+                                       <a href="../form-SP/sanpham.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_49BCO0hE24uwGUXc6_sqCoEiYAks5jWFUw&usqp=CAU"></a>
+                                   </div>
+                                   <div class="excol2-name">
+                                       <p>Pumpkin</p>
+                                   </div>
+                               </div>
+                               <div class="excol2-price">
+                                   <div class="sub-excol2-price">
+                                       <p>$55</p>
+                                   </div>
+                               </div>
+                               <div class="excol2-quantity">
+                                   <div class="sub-excol2-quantity">
+                                       <p>12</p>
+                                   </div>
+                               </div>
+                               <div class="excol2-total">
+                                   <div class="sub-excol2-total">
+                                       <p>$666</p>
+                                   </div>
+                               </div>
+                               <div class="excol2-delete">
+                                   <div class="sub-excol2-delete">
+                                       <p>x</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="ex-col3">
+                               <div class="excol3-left">
+                                   <div class="excol3-img">
+                                       <a href="../form-SP/sanpham.html"><img src="https://product.hstatic.net/200000423303/product/hat-dinh-duong-hon-hop-4-loai-hat-huu-co-sottolestelle-250g-1_a899ea0ab1d846c5abf00b73d2ee353c.jpeg"></a>
+                                   </div>
+                                   <div class="excol3-name">
+                                       <p>Nuts Mixed</p>
+                                   </div>
+                               </div>
+                               <div class="excol3-price">
+                                   <div class="sub-excol3-price">
+                                       <p>$55</p>
+                                   </div>
+                               </div>
+                               <div class="excol3-quantity">
+                                   <div class="sub-excol3-quantity">
+                                       <p>12</p>
+                                   </div>
+                               </div>
+                               <div class="excol3-total">
+                                   <div class="sub-excol3-total">
+                                       <p>$666</p>
+                                   </div>
+                               </div>
+                               <div class="excol3-delete">
+                                   <div class="sub-excol3-delete">
+                                       <p>x</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="ex-col4">
+                               <div class="excol4-left">
+                                   <div class="excol4-img">
+                                       <a href="../form-SP/sanpham.html"><img src="https://cdn.shopify.com/s/files/1/0447/7471/9645/products/Carrots-750g-15355_14355469-e55c-4219-b699-eff21b55a364_240x240.jpg?v=1637561361"></a>
+                                   </div>
+                                   <div class="excol4-name">
+                                       <p>Carrot</p>
+                                   </div>
+                               </div>
+                               <div class="excol3-price">
+                                   <div class="sub-excol4-price">
+                                       <p>$55</p>
+                                   </div>
+                               </div>
+                               <div class="excol4-quantity">
+                                   <div class="sub-excol4-quantity">
+                                       <p>12</p>
+                                   </div>
+                               </div>
+                               <div class="excol4-total">
+                                   <div class="sub-excol4-total">
+                                       <p>$666</p>
+                                   </div>
+                               </div>
+                               <div class="excol4-delete">
+                                   <div class="sub-excol4-delete">
+                                       <p>x</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                       </div>
+                       <div class="bottom-formcart">
+                           <div class="bf-left">
+                               <p>Sub Total</p>
+                           </div>
+                           <div class="bf-right">
+                               <p>$28.638</p>
+                           </div>
+                       </div>
+                   </div>
+               </form>
+
+                <form name="userfromtwo" method="post" class="formprofile" ng-submit="submitForm(userfromtwo.$valid)" novalidate>
+                    <div class="sub-formprofile">
+                        <div class="top-formprofile">
+                            <div class="sub-topformprofile">
+                                <h1>My Profile</h1>
+                                <p>Manage my profile information</p>
+                            </div>
+                        </div>
+                        <div class="main-formprofile">
+                            <div class="left-formp">
+                                <div style="margin-left: 300px;font-size: 18px;margin-top: 20px" class="font">Set New</div>
+                                <div class="row1-formp" ng-class="{'has-error' : userfromtwo.username.$invalid && !userfromtwo.username.$pristine}">
+                                    <p class="font">Login Name</p>
+                                    <input ng-model="user.username" type="text" name="username" ng-minlength="3" ng-maxlength="12" required ng-value="dominhthanh">
+                                    <a ng-show="userfromtwo.username.$error.minlength" class="help-block1">Username is invalid</a>
+                                    <a ng-show="userfromtwo.username.$error.maxlength" class="help-block2">Username is invalid</a>
+                                </div>
+
+                                <div class="row2-formp" ng-class="{'has-error' : userfromtwo.usernameone.$invalid && !userfromtwo.usernameone.$pristine}">
+                                    <p class="font">Name</p>
+                                    <input ng-model="user.usernameone" class="username" type="text" name="usernameone" ng-minlength="3" ng-maxlength="8" required value="No Name">
+                                    <a ng-show="userfromtwo.usernameone.$error.minlength" class="help-block3">Username is invalid</a>
+                                    <a ng-show="userfromtwo.usernameone.$error.maxlength" class="help-block4">Username is invalid</a>
+                                </div>
+
+                                <div class="row3-formp" ng-class="{ 'has-error': userfromtwo.email.$invalid && !userfromtwo.email.$pristine }">
+                                    <p id="row3-p1" class="font">Email</p>
+                                    <input id="row3-p2" class="font" value="tha************@gmail.com" ng-model="user.email" type="email" name="email" required>
+                                    <a ng-show="userfromtwo.email.$invalid && !userfromtwo.email.$pristine" class="help-block5">Invalid email</a>
+                                </div>
+
+                                <div class="row4-formp" ng-class="{ 'has-error': userfromtwo.number.$invalid && !userfromtwo.number.$pristine }">
+                                    <p class="font">Phone Number</p>
+                                    <input id="row3-p3" class="font" value="0999999999" ng-model="user.number" type="number" name="number" ng-minlength="9" ng-maxlength="11" required>
+                                    <a ng-show="userfromtwo.number.$error.minlength" class="help-block6">Phone Number is invalid</a>
+                                    <a ng-show="userfromtwo.number.$error.maxlength" class="help-block7">Phone Number is invalid</a>
+                                </div>
+
+                                <div class="row5-formp" ng-class="{'has-error' : userfromtwo.usernametwo.$invalid && !userfromtwo.usernametwo.$pristine}">
+                                    <p class="font">Shop Name</p>
+                                    <input ng-model="user.usernametwo" class="username" type="text" name="usernametwo" ng-minlength="3" ng-maxlength="15" required value="dominhthanh">
+                                    <a ng-show="userfromtwo.usernametwo.$error.minlength" class="help-block8">Username is invalid</a>
+                                    <a ng-show="userfromtwo.usernametwo.$error.maxlength" class="help-block9">Username is invalid</a>
+                                </div>
+
+                                <div class="row6-formp">
+                                    <p class="font">Sex</p>
+                                    <div>
+                                    <input required name="gender" type="radio" value="Male"> Male
+                                    <input required name="gender" type="radio" value="Female"> Female
+                                    <input required name="gender" type="radio" value="Other"> Other
+                                    </div>
+                                </div>
+
+                                <div class="row7-formp">
+                                    <p class="font">BirthDay</p>
+                                    <div class="into-row7">
+                                        <select required name="DAY">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+
+                                        </select>
+                                        <select required name="month">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <select required name="year">
+                                            <option value="2000">2000</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="save">
+                                    <input type="submit" class="font" value="Save">
+                                </div>
+
+                            </div>
+                            <div class="right-formp">
+                                <div class="big-icon">
+                                    <i class="fa-solid fa-circle-user"></i>
+                                </div>
+                                <div class="big-name">
+                                    <p>Change picture</p>
+                                    <p>Please choose pictures have size under 1MB</p>
+                                </div>
+                                <div class="imp-form">
+                                    <p class="imp-form1">Login Name : dominhthanh</p>
+                                    <p class="imp-form2">Name : minhthanh</p>
+                                    <p class="imp-form3">Email : thanh***********@gmail.com</p>
+                                    <p class="imp-form4">Phone Number : 0999999999</p>
+                                    <p class="imp-form5">Shop Name : minhthanh</p>
+                                    <p class="imp-form6">Sex : Male</p>
+                                    <p class="imp-form7">Birth : 21 / 08 / 2003</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="post" class="formbank">
+                    <div class="sub-formbank">
+                        <div class="bank-row1">
+                            <div class="bank-row1-col1">
+                                <h1 class="h1creadit">Credit/Debit Card</h1>
+                            </div>
+                            <div class="bank-row1-col2">
+                                <div class="pcreadit"><i class="fa-solid fa-plus"></i><p> Add Card</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bank-row2">
+                            <p class="p2creadit">You haven't linked any cards yet</p>
+                        </div>
+                        <div class="bank-row3">
+                            <div class="bank-row3-col1">
+                                <h1 class="h1creadit">My Bank Account</h1>
+                            </div>
+                            <div class="bank-row3-col2">
+                                <div class="pcreadit">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <p> Add Bank</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="bank-row4">
+                            <p class="p2creadit">You haven't linked any cards yet</p>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="post" class="formaddress">
+                    <div class="sub-formaddress">
+                        <div class="top-formaddress">
+                            <h1  class="h1creadit">My Adress</h1>
+                            <div class="pcreadit"><i class="fa-solid fa-plus"></i><p> Add Adress</p></div>
+                        </div>
+                        <div class="main-formaddres">
+                            <p>You haven't address</p>
+                        </div>
+                    </div>
+                </form>
+
+                <form name="userfromone" action="post" class="formchangepassword" ng-submit="submitForm(userfromone.$valid)" novalidate>
+                    <div class="sub-formchangepassword">
+                        <div class="top-formchangepassword">
+                            <div class="sub-topformchangepassword">
+                                <h1>Change password</h1>
+                                <p>For account security, please do not share your password with others</p>
+                            </div>
+                        </div>
+                        <div class="main-formchangepassword">
+                            <div class="first-chpass" ng-class="{'has-error' : userfromone.password.$invalid && !userfromone.password.$pristine}">
+                                <p>New password</p>
+                                <input type="password" name="password" ng-model="user.password" placeholder="password" ng-minlength="3" ng-maxlength="8" required>
+                                <a ng-show="userfromone.password.$error.minlength" class="help-block">Password is invalid</a>
+                                <a ng-show="userfromone.password.$error.maxlength" class="help-block">Password is invalid</a>
+                            </div>
+                            <div class="second-chpass" ng-class="{'has-error' : userfromone.passwordtwo.$invalid && !userfromone.passwordtwo.$pristine}">
+                                <p>Confirm pasword</p>
+                                <input type="password" name="passwordtwo" ng-model="user.passwordtwo" placeholder="password one more" ng-minlength="3" ng-maxlength="8" required>
+                                <a ng-show="userfromone.passwordtwo.$error.minlength" class="help-block">Password is invalid</a>
+                                <a ng-show="userfromone.passwordtwo.$error.maxlength" class="help-block">Password is invalid</a>
+                            </div>
+                            <div class="three-chpass" ng-class="{'has-error' : userfromone.text.$invalid && !userfromone.text.$pristine}">
+                                <p>Verification code</p>
+                                <input type="number" name="text" ng-model="user.text" placeholder="code" ng-minlength="5" ng-maxlength="6" required>
+                                <a  ng-show="userfromone.text.$error.minlength" class="help-block">Wrong code</a>
+                                <a ng-show="userfromone.text.$error.maxlength" class="help-block">Wrong code</a>
+                                <div>Send Code</div>
+                            </div>
+                            <div class="save-more">
+                                <input type="submit" value="submit"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form action="post" class="formnotification">
+                    <div class="sub-formnotification">
+                        <div class="top-notification">
+                            <p>Tick read all</p>
+                        </div>
+                        <div class="main-notification">
+                            <div class="exp-no1">
+                                <div class="no1-left">
+                                    <a href="../form-SP/sanpham.html"><img  src="https://product.hstatic.net/200000423303/product/dau-han-quoc-330g_7d5744607384465fa9c6dd5aab630719_large.jpg"></a>
+                                </div>
+                                <div class="no1-main">
+                                    <h1>New product just added to cart</h1>
+                                    <p>You have added strawberry products to your cart !</p>
+                                    <p>06/04/2022</p>
+                                </div>
+                            </div>
+                            <div class="exp-no2">
+                                <div class="no2-left">
+                                    <a href="../form-SP/sanpham.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_49BCO0hE24uwGUXc6_sqCoEiYAks5jWFUw&usqp=CAU"></a>
+                                </div>
+                                <div class="no2-main">
+                                    <h1>New product just added to cart</h1>
+                                    <p>You have added pumpkin product to your cart !</p>
+                                    <p>06/04/2022</p>
+                                </div>
+                            </div>
+                            <div class="exp-no3">
+                                <div class="no3-left">
+                                    <a href="../form-SP/sanpham.html"><img src="https://product.hstatic.net/200000423303/product/hat-dinh-duong-hon-hop-4-loai-hat-huu-co-sottolestelle-250g-1_a899ea0ab1d846c5abf00b73d2ee353c.jpeg"></a>
+                                </div>
+                                <div class="no3-main">
+                                    <h1>New product just added to cart</h1>
+                                    <p>You have added Nuts Mixed product to your cart !</p>
+                                    <p>06/04/2022</p>
+                                    </div>
+                            </div>
+                            <div class="exp-no4">
+                                <div class="no4-left">
+                                    <a href="../form-SP/sanpham.html"><img src="https://cdn.shopify.com/s/files/1/0447/7471/9645/products/Carrots-750g-15355_14355469-e55c-4219-b699-eff21b55a364_240x240.jpg?v=1637561361"></a>
+                                </div>
+                                <div class="no4-main">
+                                    <h1>New product just added to cart</h1>
+                                    <p>You have added Carrot product to your cart !</p>
+                                    <p>06/04/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="inner">
+        <div class="info-link">
+            <h3>Information Link</h3>
+            <nav>
+                <ul class="link-list">
+                    <li><a href="../form-main/index.html">Home</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="../form-term/term.html">Terms of service</a></li>
+                    <li><a href="../About%20Us/index.html">About Us</a></li>
+                    <li><a href="">Faq</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contact-detail">
+            <h3>Contact Details</h3>
+            <ul class="link-list">
+                <li><a href="mailto:OrganicStar@superCar.saupeCar">OrganicStar@superCar.saupeCar</a></li>
+                <li><a href="">www.yoursite.com</a></li>
+                <li><address>số 8A Tôn Nhất Thất,Mỹ Đình,Nam Từ Liêm,Hà Nội</address></li>
+                <li><a href="tel:099 9999 999">099 9999 999</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <h3>Social</h3>
+            <ul class="link-list">
+                <li><i class="fab fa-facebook-f"></i> 22.543 Likes</li>
+                <li><i class="fab fa-github"></i> 128 Projects</li>
+                <li><i class="fab fa-twitter"></i> 12.860 Followers</li>
+                <li><i class="fab fa-dribbble"></i> 3312 Shots</li>
+                <li><i class="fab fa-pinterest"></i> 3331 Pins</li>
+            </ul>
+        </div>
+        <div class="about-us">
+            <div class="Map">
+                <h3>FPT Aptech Computer educatio</h3>
+                <p class="map-img"><iframe id="google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3210669601112!2d106.66516922675912!3d10.786703051536417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1sen!2s!4v1647263521569!5m2!1sen!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+            </div>
+        </div>
+        <div class="about-us1">
+            <div class="Map1">
+                <h3>payment</h3>
+                <a class="img1"><img style="width: 120px;height: 80px" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.15752-9/275914127_292152229587464_4956248878149760261_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_ohc=w7zgKrbSyJ4AX_4KVeH&tn=OAW-rR5Vj9hw6Q3z&_nc_ht=scontent.fhan2-1.fna&oh=03_AVKDUo2ut18c81mWlajRvqZsJIZHrW4wmZEcs0F7lFgPaw&oe=626C10EC"></a>
+                <h3>shipping unit</h3>
+                <a class="img1"><img style="width: 120px;height: 80px" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.15752-9/275914127_292152229587464_4956248878149760261_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_ohc=w7zgKrbSyJ4AX_4KVeH&tn=OAW-rR5Vj9hw6Q3z&_nc_ht=scontent.fhan2-1.fna&oh=03_AVKDUo2ut18c81mWlajRvqZsJIZHrW4wmZEcs0F7lFgPaw&oe=626C10EC"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+    $('.div-cart').each(function (i){
+        $(this).click(function (){
+            $('.formcart').addClass('formcart-active');
+            $('.formprofile').removeClass('formprofile-active');
+            $('.formbank').removeClass('formbank-active');
+            $('.formaddress').removeClass('formaddress-active');
+            $('.formchangepassword').removeClass('formchangepassword-active');
+            $('.formnotification').removeClass('formnotification-active');
+            $('.sub-formcart').css('display','block');
+            $('#row2 p').css('color','#000000')
+            $('#row3 p').css('color','#000000')
+            $('#row4 p').css('color','#000000')
+            $('#row5 p').css('color','#000000')
+            $('.div-cart p').css('color','#2efc00')
+            $('.div-notification p').css('color','#000000')
+        });
+    });
+
+    $('#row2').each(function (i){
+        $(this).click(function (){
+            $('.formprofile').addClass('formprofile-active');
+            $('.formcart').removeClass('formcart-active');
+            $('.formbank').removeClass('formbank-active');
+            $('.formaddress').removeClass('formaddress-active');
+            $('.formchangepassword').removeClass('formchangepassword-active');
+            $('.formnotification').removeClass('formnotification-active');
+            $('.sub-formprofile').css('display','block');
+            $('.sub-formcart').css('display','none');
+            $('#row2 p').css('color','#2efc00')
+            $('#row3 p').css('color','#000000')
+            $('#row4 p').css('color','#000000')
+            $('#row5 p').css('color','#000000')
+            $('.div-cart p').css('color','#000000')
+            $('.div-notification p').css('color','#000000')
+        });
+    });
+
+    $('#row3').each(function (i){
+        $(this).click(function (){
+            $('.formcart').removeClass('formcart-active');
+            $('.formprofile').removeClass('formprofile-active');
+            $('.formbank').addClass('formbank-active');
+            $('.formaddress').removeClass('formaddress-active');
+            $('.formchangepassword').removeClass('formchangepassword-active');
+            $('.formnotification').removeClass('formnotification-active');
+            $('.sub-formbank').css('display','block');
+            $('.sub-formcart').css('display','none');
+            $('#row2 p').css('color','#000000')
+            $('#row3 p').css('color','#2efc00')
+            $('#row4 p').css('color','#000000')
+            $('#row5 p').css('color','#000000')
+            $('.div-cart p').css('color','#000000')
+            $('.div-notification p').css('color','#000000')
+        });
+    });
+
+    $('#row4').each(function (i){
+        $(this).click(function (){
+            $('.formcart').removeClass('formcart-active');
+            $('.formprofile').removeClass('formprofile-active');
+            $('.formbank').removeClass('formbank-active');
+            $('.formaddress').addClass('formaddress-active');
+            $('.formchangepassword').removeClass('formchangepassword-active');
+            $('.formnotification').removeClass('formnotification-active');
+            $('.sub-formaddress').css('display','block');
+            $('.sub-formcart').css('display','none');
+            $('#row2 p').css('color','#000000')
+            $('#row3 p').css('color','#000000')
+            $('#row4 p').css('color','#2efc00')
+            $('#row5 p').css('color','#000000')
+            $('.div-cart p').css('color','#000000')
+            $('.div-notification p').css('color','#000000')
+        });
+    });
+
+    $('#row5').each(function (i){
+        $(this).click(function (){
+            $('.formcart').removeClass('formcart-active');
+            $('.formprofile').removeClass('formprofile-active');
+            $('.formbank').removeClass('formbank-active');
+            $('.formaddress').removeClass('formaddress-active');
+            $('.formchangepassword').addClass('formchangepassword-active');
+            $('.formnotification').removeClass('formnotification-active');
+            $('.sub-formcart').css('display','none');
+            $('.sub-formchangepassword').css('display','block')
+            $('#row2 p').css('color','#000000')
+            $('#row3 p').css('color','#000000')
+            $('#row4 p').css('color','#000000')
+            $('#row5 p').css('color','#2efc00')
+            $('.div-cart p').css('color','#000000')
+            $('.div-notification p').css('color','#000000')
+        });
+    });
+    $('.div-notification').each(function (i){
+        $(this).click(function (){
+            $('.formcart').removeClass('formcart-active');
+            $('.formprofile').removeClass('formprofile-active');
+            $('.formbank').removeClass('formbank-active');
+            $('.formaddress').removeClass('formaddress-active');
+            $('.formchangepassword').removeClass('formchangepassword-active');
+            $('.formnotification').addClass('formnotification-active');
+            $('.sub-formnotification').css('display','block');
+            $('.sub-formcart').css('display','none');
+            $('#row2 p').css('color','#000000')
+            $('#row3 p').css('color','#000000')
+            $('#row4 p').css('color','#000000')
+            $('#row5 p').css('color','#000000')
+            $('.div-cart p').css('color','#000000')
+            $('.div-notification p').css('color','#2efc00')
+        });
+    });
+</script>
+<script src="khachhang.js"></script>
+</html>

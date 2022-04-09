@@ -1,0 +1,96 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.auth-form{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+}
+
+.auth-form-header{
+    max-width: 300px;
+    max-height: 700px;
+    background: rgba(0,0,0,0.8);
+    padding: 65px 50px 65px 50px;
+
+}
+
+.header-switch{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+
+.auth-form-heading{
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+.auth-form-switch-btn{
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 250;
+    text-transform: uppercase;
+}
+
+.auth-form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid snow;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    width: 100%;
+}
+.auth-form-switch-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    border: none !important;
+    font-family: monospace;
+}
+
+.form-policy{
+    text-align: center;
+}
+
+
+.form-policy a{
+    text-decoration:none;
+    color: white;
+}
+
+.form-control{
+    background: transparent;
+    color: #f5f5f5;
+    display:flex ;
+    justify-content:flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.btn-btn-primary{
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid snow;
+    background: transparent;
+    color:white;
+    text-transform: uppercase;
+}
+
+.form-socials a{
+    text-decoration: none;
+    color:white;
+}
+
+.form-btn-socials-fb{
+    margin-right: 10px;
+}
